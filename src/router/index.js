@@ -1,7 +1,9 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import HomeView from "../views/HomeView.vue";
-
+import CategoryList from "../views/Categories.vue";
+import ContactPage from "../views/Contact.vue";
+import ErrorPage from "../views/ErrorPage.vue";
 Vue.use(VueRouter);
 
 const routes = [
@@ -18,6 +20,21 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+  },
+  {
+    path: "/categories",
+    name: "categories",
+    component: CategoryList,
+  },
+  {
+    path: "/contact",
+    name: "contact",
+    component: ContactPage,
+  },
+  {
+    path: "/:catchAll(.*)",
+    name: "errorpage",
+    component: ErrorPage,
   },
 ];
 

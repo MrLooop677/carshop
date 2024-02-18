@@ -1,0 +1,15 @@
+ul{
+    background-color: #000;
+            padding: 10px;
+
+    li a{
+        padding: 10px;
+        margin-right: 10px;
+                    color:#fff;
+
+    }
+    .router-link-exact-active{
+        background-color: green;
+        color:"#fff"
+    }
+}
