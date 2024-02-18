@@ -3,7 +3,11 @@
     <ul class="d-flex justify-content-center align-items-center">
       <!-- Iterate over navbarLinks and reference each item as link -->
       <li v-for="link in navbarLinks" :key="link">
-        <router-link :to="link === 'Home' ? '/' : link">
+        <router-link
+          :to="{
+            path: link === 'Home' ? '/' : link,
+          }"
+        >
           <a>{{ link }}</a>
         </router-link>
       </li>

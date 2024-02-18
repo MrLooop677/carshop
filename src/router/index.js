@@ -43,5 +43,7 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes,
 });
-
+router.afterEach((to) => {
+  document.title = `${to?.name} page`;
+});
 export default router;
