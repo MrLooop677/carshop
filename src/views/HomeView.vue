@@ -2,9 +2,7 @@
   <div class="home">
     <div class="container">
       <div class="row">
-        <div class="col-2">
-          <sidebar />
-        </div>
+        <div class="col-2"><sidebar @filterData="filterData" /></div>
         <div class="col-10">
           <cars :cars="cars" />
         </div>
@@ -16,7 +14,7 @@
 <script>
 import Sidebar from "@/components/sidebar/Sidebar.vue";
 import Cars from "@/components/cars/cars.vue";
-import { fetchCars } from "@/services/apis/cars";
+import { fetchCars, fetchFilterCars } from "@/services/apis/cars";
 // @ is an alias to /src
 
 export default {
@@ -35,6 +33,14 @@ export default {
       try {
         this.cars = await fetchCars();
 
+        // Use the fetchCars function from the service
+      } catch (error) {
+        console.error("Error fetching cars:", error);
+      }
+    },
+    async filterData(wordFilter) {
+      try {
+        this.cars = await fetchFilterCars(wordFilter);
         // Use the fetchCars function from the service
       } catch (error) {
         console.error("Error fetching cars:", error);

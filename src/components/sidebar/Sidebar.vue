@@ -1,30 +1,20 @@
 <template>
   <div class="navbar">
     <ul>
-      <li>
-        <router-link to="/about">
-          <a>Honda</a>
-        </router-link>
+      <li @click="filterByCategory('Honda')">
+        <a>Honda</a>
       </li>
-      <li>
-        <router-link to="/about">
-          <a>Toyota</a>
-        </router-link>
+      <li @click="filterByCategory('Toyota')">
+        <a>Toyota</a>
       </li>
-      <li>
-        <router-link to="/about">
-          <a>Ford</a>
-        </router-link>
+      <li @click="filterByCategory('Ford')">
+        <a>Ford</a>
       </li>
-      <li>
-        <router-link to="/about">
-          <a>Chevrolet</a>
-        </router-link>
+      <li @click="filterByCategory('Chevrolet')">
+        <a>Chevrolet</a>
       </li>
-      <li>
-        <router-link to="/about">
-          <a>Nissan</a>
-        </router-link>
+      <li @click="filterByCategory('Nissan')">
+        <a>Nissan</a>
       </li>
     </ul>
   </div>
@@ -33,6 +23,11 @@
 <script>
 export default {
   name: "SidebarView",
+  methods: {
+    filterByCategory(category) {
+      this.$emit("filterData", category);
+    },
+  },
 };
 </script>
 
