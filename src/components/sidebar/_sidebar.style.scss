@@ -1,0 +1,24 @@
+.navbar {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  ul {
+    padding: 0;
+    width: 100%;
+
+    li {
+      padding: 10px;
+      background-color: #28272F; 
+      margin-bottom: 10px;
+      cursor: pointer;
+
+      a {
+        padding: 10px;
+        color: white;
+        &:hover{
+            color: white;
+        }
+      }
+    }
+  }
+}

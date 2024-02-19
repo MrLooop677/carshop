@@ -3,7 +3,9 @@ import VueRouter from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import CategoryList from "../views/Categories.vue";
 import ContactPage from "../views/Contact.vue";
+import CarInfo from "../components/cars/car-info.vue";
 import ErrorPage from "../views/ErrorPage.vue";
+
 Vue.use(VueRouter);
 
 const routes = [
@@ -30,6 +32,11 @@ const routes = [
     path: "/contact",
     name: "contact",
     component: ContactPage,
+  },
+  {
+    path: "/cardetails/:carName/:carId",
+    name: "cardetails",
+    component: CarInfo,
   },
   {
     path: "/:catchAll(.*)",

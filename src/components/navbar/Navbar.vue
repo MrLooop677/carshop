@@ -16,7 +16,6 @@
 </template>
 
 <script>
-import "./_navbar.style.scss";
 export default {
   name: "NavBar",
   data: function () {
@@ -27,4 +26,7 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped lang="scss">
+/* Import navbar styles */
+@import "./_navbar.style.scss";
+</style>
