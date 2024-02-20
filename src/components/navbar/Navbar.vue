@@ -20,7 +20,7 @@ export default {
   name: "NavBar",
   data: function () {
     return {
-      navbarLinks: ["Home", "About", "Categories", "Contact"],
+      navbarLinks: ["Home"],
     };
   },
 };
